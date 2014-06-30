@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:daia="http://purl.org/ontology/daia/" xmlns:dct="http://purl.org/dc/terms/" xmlns:gbv="http://purl.org/ontology/gbv#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:vann="http://purl.org/vocab/vann/" xmlns:voaf="http://purl.org/vocommons/voaf#" xmlns:void="http://rdfs.org/ns/void#" xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv">
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv">
+    <dct:title>GBV Ontology</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv">
+    <rdfs:label>GBV</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv">
+    <vann:preferredNamespacePrefix>gbv</vann:preferredNamespacePrefix>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv">
+    <vann:preferredNamespaceUri>http://purl.org/ontology/gbv#</vann:preferredNamespaceUri>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv">
+    <dct:description>Ontology of common concepts and relationships used in the GBV library network</dct:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-06-30</dct:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv">
+    <owl:versionInfo>rev3</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv">
+    <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv">
+    <dct:creator>Jakob Voß</dct:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#gvkppn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#gvkppn">
+    <rdfs:label xml:lang="en">gvkppn</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#gvkppn">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#gvkppn">
+    <rdfs:comment xml:lang="en">PPN identifier within the GBV union catalog (GVK)</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#gvkppn">
+    <skos:scopeNote xml:lang="en">a PPN in general identifies a record in any PICA database. This property must only be used to identity records in GVK.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#gvkppn">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/gbv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#iln">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#iln">
+    <rdfs:label xml:lang="en">iln</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#iln">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#iln">
+    <rdfs:comment xml:lang="en">internal library number (ILN) as library identifier within the GBV</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#iln">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/gbv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#eln">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#eln">
+    <rdfs:label xml:lang="en">eln</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#eln">
+    <rdfs:comment xml:lang="en">external library number (ELN) as library identifier within the GBV</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#eln">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#eln">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/gbv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#dbkey">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#dbkey">
+    <rdfs:label xml:lang="en">dbkey</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#dbkey">
+    <rdfs:comment xml:lang="en">database key, used as prefix in unAPI and at other APIs within the GBV</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#dbkey">
+    <skos:scopeNote xml:lang="en">must comply to the regular expression ^[a-z][a-z0-9-]*[a-z0-9]$</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#dbkey">
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/identifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#dbkey">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/gbv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#opac">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#opac">
+    <rdfs:label xml:lang="en">opac</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#opac">
+    <rdfs:range rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#opac">
+    <rdfs:comment xml:lang="en">main catalog of an institution</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#opac">
+    <skos:scopeNote xml:lang="en">the main catalog of a library usually contains records about its holdings, but the main catalog could also contain records that are not held by the institution.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#opac">
+    <rdfs:domain rdf:resource="http://purl.org/ontology/daia/Institution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#opac">
+    <rdfs:seeAlso rdf:resource="http://purl.org/cld/terms/catalogueOrIndex"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#opac">
+    <rdfs:seeAlso rdf:resource="http://id.loc.gov/vocabulary/relators/own"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#opac">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/gbv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#srubase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#srubase">
+    <rdfs:label xml:lang="en">srubase</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#srubase">
+    <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#srubase">
+    <rdfs:comment xml:lang="en">SRU interface of a database</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#srubase">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/gbv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#picabase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#picabase">
+    <rdfs:label xml:lang="en">picabase</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#picabase">
+    <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#picabase">
+    <rdfs:comment xml:lang="en">PICA base URL of a database</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#picabase">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/gbv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#solrbase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#solrbase">
+    <rdfs:label xml:lang="en">solrbase</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#solrbase">
+    <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#solrbase">
+    <rdfs:comment xml:lang="en">Solr base URL of a database</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#solrbase">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/gbv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#oaibase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#oaibase">
+    <rdfs:label xml:lang="en">oaibase</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#oaibase">
+    <rdfs:domain rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#oaibase">
+    <rdfs:comment xml:lang="en">OAI-PMH base URL of a database</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#oaibase">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/gbv#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#ppn">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Datatype"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#ppn">
+    <rdfs:label xml:lang="en">PPN identifier</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#ppn">
+    <rdfs:comment xml:lang="en">A PPN in general identifies a record in a PICA database, but it does not indicate which database it comes from.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/gbv#ppn">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/gbv#"/>
+  </rdf:Description>
+</rdf:RDF>

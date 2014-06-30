@@ -1,0 +1,100 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix gbv: <http://purl.org/ontology/gbv#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix daia: <http://purl.org/ontology/daia/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/ontology/gbv>
+    cc:license <http://creativecommons.org/licenses/by/3.0/> ;
+    dct:creator "Jakob Voß" ;
+    dct:description "Ontology of common concepts and relationships used in the GBV library network" ;
+    dct:modified "2014-06-30"^^xsd:date ;
+    dct:title "GBV Ontology" ;
+    vann:preferredNamespacePrefix "gbv" ;
+    vann:preferredNamespaceUri "http://purl.org/ontology/gbv#" ;
+    a voaf:Vocabulary, owl:Ontology ;
+    rdfs:label "GBV" ;
+    owl:versionInfo "rev3" .
+
+gbv:dbkey
+    a owl:DatatypeProperty ;
+    rdfs:comment "database key, used as prefix in unAPI and at other APIs within the GBV"@en ;
+    rdfs:isDefinedBy <http://purl.org/ontology/gbv#> ;
+    rdfs:label "dbkey"@en ;
+    rdfs:subPropertyOf dct:identifier ;
+    skos:scopeNote "must comply to the regular expression ^[a-z][a-z0-9-]*[a-z0-9]$"@en .
+
+gbv:eln
+    a owl:DatatypeProperty ;
+    rdfs:comment "external library number (ELN) as library identifier within the GBV"@en ;
+    rdfs:isDefinedBy <http://purl.org/ontology/gbv#> ;
+    rdfs:label "eln"@en ;
+    rdfs:subPropertyOf dct:identifier .
+
+gbv:gvkppn
+    a owl:DatatypeProperty ;
+    rdfs:comment "PPN identifier within the GBV union catalog (GVK)"@en ;
+    rdfs:isDefinedBy <http://purl.org/ontology/gbv#> ;
+    rdfs:label "gvkppn"@en ;
+    rdfs:subPropertyOf dct:identifier ;
+    skos:scopeNote "a PPN in general identifies a record in any PICA database. This property must only be used to identity records in GVK."@en .
+
+gbv:iln
+    a owl:DatatypeProperty ;
+    rdfs:comment "internal library number (ILN) as library identifier within the GBV"@en ;
+    rdfs:isDefinedBy <http://purl.org/ontology/gbv#> ;
+    rdfs:label "iln"@en ;
+    rdfs:subPropertyOf dct:identifier .
+
+gbv:oaibase
+    a owl:ObjectProperty ;
+    rdfs:comment "OAI-PMH base URL of a database"@en ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy <http://purl.org/ontology/gbv#> ;
+    rdfs:label "oaibase"@en .
+
+gbv:opac
+    a owl:ObjectProperty ;
+    rdfs:comment "main catalog of an institution"@en ;
+    rdfs:domain daia:Institution ;
+    rdfs:isDefinedBy <http://purl.org/ontology/gbv#> ;
+    rdfs:label "opac"@en ;
+    rdfs:range void:Dataset ;
+    rdfs:seeAlso <http://id.loc.gov/vocabulary/relators/own>, <http://purl.org/cld/terms/catalogueOrIndex> ;
+    skos:scopeNote "the main catalog of a library usually contains records about its holdings, but the main catalog could also contain records that are not held by the institution."@en .
+
+gbv:picabase
+    a owl:ObjectProperty ;
+    rdfs:comment "PICA base URL of a database"@en ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy <http://purl.org/ontology/gbv#> ;
+    rdfs:label "picabase"@en .
+
+gbv:ppn
+    a rdfs:Datatype ;
+    rdfs:comment "A PPN in general identifies a record in a PICA database, but it does not indicate which database it comes from."@en ;
+    rdfs:isDefinedBy <http://purl.org/ontology/gbv#> ;
+    rdfs:label "PPN identifier"@en .
+
+gbv:solrbase
+    a owl:ObjectProperty ;
+    rdfs:comment "Solr base URL of a database"@en ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy <http://purl.org/ontology/gbv#> ;
+    rdfs:label "solrbase"@en .
+
+gbv:srubase
+    a owl:ObjectProperty ;
+    rdfs:comment "SRU interface of a database"@en ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy <http://purl.org/ontology/gbv#> ;
+    rdfs:label "srubase"@en .
+

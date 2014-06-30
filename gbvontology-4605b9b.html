@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de_DE">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Jakob Voß (VZG)" />
+  <meta name="date" content="2014-06-30" />
+  <title>GBV Ontology</title>
+  <link rel="alternate" type="application/rdf+xml" href="gbvontology.owl" />
+   <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <style type="text/css">
+  body { font-family: sans-serif; }
+  a { text-decoration: none }
+  a:hover { text-decoration: underline }
+  h1 { font: 170% sans-serif }
+  h1.title { font-size: 200%; font-weight: bold; }
+  h2 { font: 140% sans-serif }
+  h3 { font: 120% sans-serif }
+  dt { font-weight: bold; }
+  h1, h2, h3, h1 a, h2 a, h3 a { color: #005A9C; }
+  table { border-collapse: collapse; }
+  td { border: 1px solid #999; padding: 3px }
+  dl p { margin-top: 0; }
+  dt { margin-top: 0.8em; }
+  dd { margin-left: 1.5em; }
+  ol { margin-bottom: 1em; }
+  table + p { margin-top: 1em; }
+  </style>
+</head>
+<body>
+<a href="http://github.com/gbv/gbvontology/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+<header>
+<h1 class="title">GBV Ontology</h1>
+<h3 class="author">Jakob Voß (VZG)</h3>
+<h4 class="date">2014-06-30 (version rev3)</h4>
+</header>
+
+<h1>Table of Contents</h1>
+<nav id="TOC">
+<ul>
+<li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a><ul>
+<li><a href="#status-of-this-document"><span class="toc-section-number">1.1</span> Status of this document</a></li>
+<li><a href="#namespaces-and-ontology"><span class="toc-section-number">1.2</span> Namespaces and ontology</a></li>
+</ul></li>
+<li><a href="#properties"><span class="toc-section-number">2</span> Properties</a><ul>
+<li><a href="#datatype-properties"><span class="toc-section-number">2.1</span> Datatype properties</a><ul>
+<li><a href="#gvkppn"><span class="toc-section-number">2.1.1</span> gvkppn</a></li>
+<li><a href="#iln"><span class="toc-section-number">2.1.2</span> iln</a></li>
+<li><a href="#eln"><span class="toc-section-number">2.1.3</span> eln</a></li>
+<li><a href="#dbkey"><span class="toc-section-number">2.1.4</span> dbkey</a></li>
+</ul></li>
+<li><a href="#object-properties"><span class="toc-section-number">2.2</span> Object properties</a><ul>
+<li><a href="#opac"><span class="toc-section-number">2.2.1</span> opac</a></li>
+<li><a href="#srubase"><span class="toc-section-number">2.2.2</span> srubase</a></li>
+<li><a href="#picabase"><span class="toc-section-number">2.2.3</span> picabase</a></li>
+<li><a href="#solrbase"><span class="toc-section-number">2.2.4</span> solrbase</a></li>
+<li><a href="#oaibase"><span class="toc-section-number">2.2.5</span> oaibase</a></li>
+</ul></li>
+<li><a href="#datatypes"><span class="toc-section-number">2.3</span> Datatypes</a></li>
+<li><a href="#ppn"><span class="toc-section-number">2.4</span> ppn</a></li>
+</ul></li>
+</ul>
+</nav>
+<section id="introduction" class="level1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<p>This ontology defines some concepts used by the GBV library network. The ontology may include experimental parts.</p>
+<section id="status-of-this-document" class="level2">
+<h2><span class="header-section-number">1.1</span> Status of this document</h2>
+<p>The ontology is available in form of this document and:</p>
+<ul>
+<li>in RDF/Turtle: <a href="gbv.ttl"><strong><code>gbvontology.ttl</code></strong></a></li>
+<li>in RDF/XML <a href="gbvontology.owl"><strong><code>gbv.owl</code></strong></a></li>
+</ul>
+<p>All forms are generated from a source file written in Pandoc Markdown syntax.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> Sources and updates are available at <a href="http://github.com/gbv/gbvontology">http://github.com/gbv/gbvontology</a>.</p>
+<p>This is version rev3, last modified at 2014-06-30 with revision <a href="http://github.com/gbv/gbvontology/commit/4605b9b643a850efe8c10c56c5c7c2beed8b557b">4605b9b</a>.</p>
+<p><a href="https://github.com/gbv/gbv/issues">Feedback</a> is welcome!</p>
+<p><strong>Revision history</strong></p>
+<ul>
+<li><a href="gbvontology-4605b9b.html"><code>2014-06-30 15:16:56 +0200</code></a>: <a href="http://github.com/gbv/gbvontology/commit/4605b9b643a850efe8c10c56c5c7c2beed8b557b">missing namespaces</a></li>
+<li><a href="gbvontology-a3d4a8c.html"><code>2014-06-30 15:12:45 +0200</code></a>: <a href="http://github.com/gbv/gbvontology/commit/a3d4a8cc5d14e35549da61999d61b7fe663e5d53">moved to makespec</a></li>
+</ul>
+</section>
+<section id="namespaces-and-ontology" class="level2">
+<h2><span class="header-section-number">1.2</span> Namespaces and ontology</h2>
+<p>The URI namespace of this ontology is <a href="http://purl.org/ontology/gbv#">http://purl.org/ontology/gbv#</a>. The namespace prefix <code>gbv</code> is recommended. The URI of this ontology as a whole is <a href="http://purl.org/ontology/gbv">http://purl.org/ontology/gbv</a>.</p>
+<pre><code>@prefix gbv: &lt;http://purl.org/ontology/gbv#&gt; .
+@base        &lt;http://purl.org/ontology/gbv&gt; .</code></pre>
+<p>The following namespace prefixes are used to refer to [related ontologies]:</p>
+<pre><code>@prefix cc:   &lt;http://creativecommons.org/ns#&gt; .
+@prefix daia: &lt;http://purl.org/ontology/daia/&gt; .
+@prefix dct:  &lt;http://purl.org/dc/terms/&gt; .
+@prefix dct:  &lt;http://purl.org/dc/terms/&gt; .
+@prefix owl:  &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix skos: &lt;http://www.w3.org/2004/02/skos/core#&gt; .
+@prefix vann: &lt;http://purl.org/vocab/vann/&gt; .
+@prefix voaf: &lt;http://purl.org/vocommons/voaf#&gt; .
+@prefix void: &lt;http://rdfs.org/ns/void#&gt; .
+@prefix vs:   &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#&gt; .
+@prefix xsd:  &lt;http://www.w3.org/2001/XMLSchema#&gt; .</code></pre>
+<p>The GBV Ontology is defined in RDF/Turtle as following:</p>
+<pre><code>&lt;&gt; a owl:Ontology, voaf:Vocabulary ;
+    dct:title &quot;GBV Ontology&quot; ;
+    rdfs:label &quot;GBV&quot; ;
+    vann:preferredNamespacePrefix &quot;gbv&quot; ;
+    vann:preferredNamespaceUri &quot;http://purl.org/ontology/gbv#&quot; ;
+    dct:description &quot;Ontology of common concepts and relationships used in the GBV library network&quot; ;
+    dct:modified &quot;2014-06-30&quot;^^xsd:date ;
+    owl:versionInfo &quot;rev3&quot; ;
+    cc:license &lt;http://creativecommons.org/licenses/by/3.0/&gt; ;
+    dct:creator &quot;Jakob Voß&quot; .</code></pre>
+</section>
+</section>
+<section id="properties" class="level1">
+<h1><span class="header-section-number">2</span> Properties</h1>
+<section id="datatype-properties" class="level2">
+<h2><span class="header-section-number">2.1</span> Datatype properties</h2>
+<section id="gvkppn" class="level3">
+<h3><span class="header-section-number">2.1.1</span> gvkppn</h3>
+<pre><code>gbv:gvkppn a owl:DatatypeProperty ;
+    rdfs:label &quot;gvkppn&quot;@en ;
+    rdfs:subPropertyOf dct:identifier ;
+    rdfs:comment &quot;PPN identifier within the GBV union catalog (GVK)&quot;@en ;
+    skos:scopeNote &quot;a PPN in general identifies a record in any PICA database. This property must only be used to identity records in GVK.&quot;@en ;
+    rdfs:isDefinedBy gbv: .</code></pre>
+</section>
+<section id="iln" class="level3">
+<h3><span class="header-section-number">2.1.2</span> iln</h3>
+<pre><code>gbv:iln a owl:DatatypeProperty ;
+  rdfs:label &quot;iln&quot;@en ;
+  rdfs:subPropertyOf dct:identifier ;
+  rdfs:comment &quot;internal library number (ILN) as library identifier within the GBV&quot;@en ;
+  rdfs:isDefinedBy gbv: .</code></pre>
+</section>
+<section id="eln" class="level3">
+<h3><span class="header-section-number">2.1.3</span> eln</h3>
+<pre><code>gbv:eln a owl:DatatypeProperty ;
+  rdfs:label &quot;eln&quot;@en ;
+  rdfs:comment &quot;external library number (ELN) as library identifier within the GBV&quot;@en ;
+  rdfs:subPropertyOf dct:identifier ;
+  rdfs:isDefinedBy gbv: .</code></pre>
+</section>
+<section id="dbkey" class="level3">
+<h3><span class="header-section-number">2.1.4</span> dbkey</h3>
+<pre><code>gbv:dbkey a owl:DatatypeProperty ;
+  rdfs:label &quot;dbkey&quot;@en ;
+  rdfs:comment &quot;database key, used as prefix in unAPI and at other APIs within the GBV&quot;@en ;
+  skos:scopeNote &quot;must comply to the regular expression ^[a-z][a-z0-9-]*[a-z0-9]$&quot;@en ;
+  rdfs:subPropertyOf dct:identifier ;
+  rdfs:isDefinedBy gbv: .</code></pre>
+</section>
+</section>
+<section id="object-properties" class="level2">
+<h2><span class="header-section-number">2.2</span> Object properties</h2>
+<section id="opac" class="level3">
+<h3><span class="header-section-number">2.2.1</span> opac</h3>
+<pre><code>gbv:opac a owl:ObjectProperty ;
+   rdfs:label &quot;opac&quot;@en ;
+   rdfs:range void:Dataset ;
+   rdfs:comment &quot;main catalog of an institution&quot;@en ;
+   skos:scopeNote &quot;the main catalog of a library usually contains records about its holdings, but the main catalog could also contain records that are not held by the institution.&quot;@en;
+   rdfs:domain daia:Institution ;
+   rdfs:seeAlso &lt;http://purl.org/cld/terms/catalogueOrIndex&gt; ;
+   rdfs:seeAlso &lt;http://id.loc.gov/vocabulary/relators/own&gt; ;
+   rdfs:isDefinedBy gbv: .</code></pre>
+</section>
+<section id="srubase" class="level3">
+<h3><span class="header-section-number">2.2.2</span> srubase</h3>
+<pre><code>gbv:srubase a owl:ObjectProperty ;
+   rdfs:label &quot;srubase&quot;@en ;
+   rdfs:domain void:Dataset ;
+   rdfs:comment &quot;SRU interface of a database&quot;@en ;
+   rdfs:isDefinedBy gbv: .</code></pre>
+</section>
+<section id="picabase" class="level3">
+<h3><span class="header-section-number">2.2.3</span> picabase</h3>
+<pre><code>gbv:picabase a owl:ObjectProperty ;
+   rdfs:label &quot;picabase&quot;@en ;
+   rdfs:domain void:Dataset ;
+   rdfs:comment &quot;PICA base URL of a database&quot;@en ;
+   rdfs:isDefinedBy gbv: .</code></pre>
+</section>
+<section id="solrbase" class="level3">
+<h3><span class="header-section-number">2.2.4</span> solrbase</h3>
+<pre><code>gbv:solrbase a owl:ObjectProperty ;
+   rdfs:label &quot;solrbase&quot;@en ;
+   rdfs:domain void:Dataset ;
+   rdfs:comment &quot;Solr base URL of a database&quot;@en ;
+   rdfs:isDefinedBy gbv: .</code></pre>
+</section>
+<section id="oaibase" class="level3">
+<h3><span class="header-section-number">2.2.5</span> oaibase</h3>
+<pre><code>gbv:oaibase a owl:ObjectProperty ;
+   rdfs:label &quot;oaibase&quot;@en ;
+   rdfs:domain void:Dataset ;
+   rdfs:comment &quot;OAI-PMH base URL of a database&quot;@en ;
+   rdfs:isDefinedBy gbv: .</code></pre>
+</section>
+</section>
+<section id="datatypes" class="level2">
+<h2><span class="header-section-number">2.3</span> Datatypes</h2>
+</section>
+<section id="ppn" class="level2">
+<h2><span class="header-section-number">2.4</span> ppn</h2>
+<pre><code>gbv:ppn a rdfs:Datatype ;
+   rdfs:label &quot;PPN identifier&quot;@en ;
+   rdfs:comment &quot;A PPN in general identifies a record in a PICA database, but it does not indicate which database it comes from.&quot;@en ;
+   rdfs:isDefinedBy gbv: .</code></pre>
+</section>
+</section>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Documents are generated using <a href="http://jakobib.github.io/makespec/">makespec</a>.<a href="#fnref1">↩</a></p></li>
+</ol>
+</section>
+</body>
+</html>
