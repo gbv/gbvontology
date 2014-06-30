@@ -1,6 +1,7 @@
 # Introduction
 
-This ontology defines some concepts used by the GBV library network.
+This ontology defines some concepts used by the GBV library network. The
+ontology may include experimental parts.
 
 ## Status of this document
 
@@ -35,13 +36,16 @@ is <http://purl.org/ontology/gbv>.
 
 The following namespace prefixes are used to refer to [related ontologies]:
 
-    @prefix dct:  <http://purl.org/dc/terms/> .
     @prefix cc:   <http://creativecommons.org/ns#> .
+    @prefix daia: <http://purl.org/ontology/daia/> .
+    @prefix dct:  <http://purl.org/dc/terms/> .
     @prefix dct:  <http://purl.org/dc/terms/> .
     @prefix owl:  <http://www.w3.org/2002/07/owl#> .
     @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
     @prefix vann: <http://purl.org/vocab/vann/> .
     @prefix voaf: <http://purl.org/vocommons/voaf#> .
+    @prefix void: <http://rdfs.org/ns/void#> .
     @prefix vs:   <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
     @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
